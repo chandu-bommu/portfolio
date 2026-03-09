@@ -19,8 +19,10 @@ The static output is generated in `out/` and deployed automatically through `.gi
 
 ## GitHub Pages setup
 
-1. Create/use repository: `cbommu/cbommu.github.io`.
+1. Use repository name `cbommu.github.io` under your account (`cbommu/cbommu.github.io`) for root domain hosting.
 2. Push this code to the `main` branch.
-3. In GitHub repository settings, ensure **Pages** source is set to **GitHub Actions**.
-4. Once the workflow succeeds, your site will be available at:
+3. In **Settings → Pages**, ensure GitHub Pages is enabled and source is **GitHub Actions**.
+4. In **Settings → Actions → General**, allow GitHub Actions to create and approve deployments if restricted.
+5. Re-run the workflow after enabling Pages.
+6. Once the workflow succeeds, your site will be available at:
    - `https://cbommu.github.io`
