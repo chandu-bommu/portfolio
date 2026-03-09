@@ -26,3 +26,12 @@ The static output is generated in `out/` and deployed automatically through `.gi
 5. Re-run the workflow after enabling Pages.
 6. Once the workflow succeeds, your site will be available at:
    - `https://cbommu.github.io`
+
+### Why styles were missing on GitHub Pages
+
+If the repository is a **project pages** repo (for example `chandu-bommu/portfolio`), GitHub serves it at `/portfolio`.
+Next.js needs a matching `basePath` so CSS/JS assets load from `/portfolio/_next/...` instead of `/_next/...`.
+
+This project now auto-detects repository type in CI:
+- **User/Org Pages repo** (like `cbommu.github.io`): served at root `/`
+- **Project repo** (like `portfolio`): served at `/<repo-name>`
